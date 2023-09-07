@@ -1,0 +1,15 @@
+.row {
+    background-color: #92accd;
+    padding: 20px;
+}
+
+.circulo {
+    display: flex; /*agrupa las cajas*/
+    flex-direction: column; /*se pone uno a bajo del otro*/
+    align-items: center; /*centrado al medio*/
+}
+
+tr {
+    border-color: #92accd;
+}
+

@@ -1,0 +1,44 @@
+<div class="container" *ngIf="educacion">
+    <div class="row">
+        <div>
+            <br>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreEd">Titulo del Curso/Carrera</label>
+                    <input type="text" class="form-control" id="nombreEd" name="nombreEd" [(ngModel)]="educacion.nombreEd" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="descripcionEd">Descripción del Curso/Carrera</label>
+                    <input type="text" class="form-control" id="descripcionEd" name="descripcionEd"
+                        [(ngModel)]="educacion.descripcionEd" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="periodoEd">Periodo que abarco el Curso/Carrera</label>
+                    <input type="text" class="form-control" id="periodoEd" name="periodoEd" [(ngModel)]="educacion.periodoEd" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="linkEd">Link del Curso/Carrera/Institución</label>
+                    <input type="text" class="form-control" id="linkEd" name="linkEd" [(ngModel)]="educacion.linkEd"
+                        required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="imgEd">Imagen del Curso/Carrera/Institución</label>
+                    <input type="file" class="form-control" id="imgEd" name="imgEd" [(ngModel)]="educacion.imgEd"
+                        (change)="uploadImage($event)" accept=".jpg, .jpeg, .png, .gif">
+                </div>
+                <br>
+                <div class="imagen">
+                    <img [src]="imageService.url" title="vista previa" id="imageService" width="250px">
+                </div>
+                <br>
+                <button class="btn btn-primary">
+                    Editar Educación
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
